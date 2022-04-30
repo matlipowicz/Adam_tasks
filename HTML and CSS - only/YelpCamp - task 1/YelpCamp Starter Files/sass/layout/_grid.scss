@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--clr-beige);
+  overflow-x: hidden;
+}
+
+.campground {
+  display: grid;
+  justify-items: center;
+  width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+}
+
+.content-offer {
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: repeat(3, 1fr);
+  gap: 4rem;
+  justify-items: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 2rem;
+}

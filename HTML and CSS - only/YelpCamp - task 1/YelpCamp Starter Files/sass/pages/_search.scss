@@ -1,0 +1,291 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.container {
+  // position: relative;
+  &__search {
+    background-color: var(--clr-white);
+  }
+}
+
+.sticky-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 1rem 1rem;
+  color: var(--clr-white);
+  // line-height: 2rem;
+
+  width: 100%;
+  background-color: var(--clr-black);
+
+  &__author,
+  &__designer {
+    color: var(--clr-lazure);
+  }
+  &__author {
+  }
+
+  &__designer {
+  }
+
+  &__cross {
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.header-search {
+  margin: 3rem 0 3rem 0;
+  width: 100%;
+
+  &__logo {
+    width: 24rem;
+    height: 3rem;
+    line-height: 0;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+// HAMBURGER MENU
+
+.hamburger {
+  background-color: var(--clr-beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
+
+// NAVIGATION
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  text-align: right;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1.5rem;
+  width: 0;
+  height: 100vh;
+  background-color: rgba(249, 246, 240, 1);
+  transform: translateX(150%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: var(--clr-beige);
+    border: 2px solid var(--clr-dark-grey);
+    border-radius: 50rem;
+    padding: 2rem;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+
+    position: absolute;
+    top: 20rem;
+    left: -2.5rem;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 21.6rem;
+    left: -0.8rem;
+  }
+
+  &__home-list,
+  &__sign-up {
+    list-style: none;
+  }
+
+  &__home-link {
+    text-decoration: none;
+    color: var(--clr-dark-grey);
+    font-size: 2.4rem;
+    font-weight: var(--fw-regular);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--clr-black);
+    }
+  }
+
+  &__login {
+    text-decoration: none;
+    color: var(--clr-dark-grey);
+    font-size: 2.4rem;
+    font-weight: var(--fw-regular);
+
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--clr-black);
+    }
+  }
+
+  &__register {
+    text-decoration: none;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+  }
+}
+
+.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in;
+  width: 60%;
+}
+
+.content-search {
+}
+
+// CAMP FILTERING SECTION
+
+.camp-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  padding: 3.5rem;
+  background-color: var(--clr-beige);
+  border-radius: 2px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 0.5rem;
+  }
+
+  &__input {
+    // margin-top: 1rem;;
+    // padding: 1.5rem;
+    align-self: stretch;
+    border: none;
+    width: 100%;
+    // border: 1.5px solid var(--clr-light-grey);
+    // position: relative;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input-field {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-white);
+    border: 1.5px solid var(--clr-light-grey);
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  &__magnifying-glass {
+    // position: absolute;
+    margin-right: 1rem;
+  }
+
+  &__btn {
+    align-self: stretch;
+    font-weight: var(--fw-bold);
+  }
+
+  &__add {
+    margin-top: 2rem;
+    width: 100%;
+    align-self: center;
+
+    color: var(--clr-dark-grey);
+    font-size: 1.4rem;
+  }
+}
+
+// CAMPS SECTION
+
+.campground {
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 2px solid var(--clr-light-grey);
+  border-radius: 5px;
+  //   min-width: 35rem;
+  width: 100%;
+  max-width: 40rem;
+
+  &--1 {
+  }
+
+  &--2 {
+  }
+
+  &--3 {
+  }
+  &--4 {
+  }
+  &--5 {
+  }
+  &--6 {
+  }
+
+  &__image {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  &__link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// TYPOGRAPHY
+
+.heading-4 {
+  font-size: var(--h4-font-size);
+  align-self: start;
+  // line-height: 2rem;
+}
+
+.footer-search {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding: 5rem 2rem;
+}

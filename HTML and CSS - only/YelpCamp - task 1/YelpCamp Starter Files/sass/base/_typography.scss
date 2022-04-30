@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.heading-1 {
+    // font-size: var(--h1-font-size);
+    font-size: clamp(2.8rem, 5.5vw, 3.8rem);
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    --default-font-size: 1.4rem;
+
+    // font-size: var(--default-font-size);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: var(--fw-light);
+    color: var(--clr-dark-grey);
+    line-height: 2.5rem;
+}

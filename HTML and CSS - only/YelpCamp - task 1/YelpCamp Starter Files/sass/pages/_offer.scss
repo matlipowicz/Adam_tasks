@@ -1,0 +1,113 @@
+.container-offer {
+  background-color: var(--clr-white);
+}
+
+.card-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding: clamp(2rem, 5vw, 5rem);
+
+  border: 2px solid var(--clr-light-grey);
+  border-radius: 5px;
+
+  min-width: 100%;
+  //   max-width: 50rem;
+
+  &__heading {
+    display: flex;
+    // gap: 16rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__confirmation {
+    align-self: start;
+    padding: 2rem 0;
+  }
+
+  &__img {
+  }
+
+  &__image-box {
+    border-radius: 4px;
+    background-image: url('../../images/Camp-Images/Compressed-Images/Mount\ Ulap.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 100%;
+  }
+}
+
+.opinions {
+  width: 100%;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  padding: clamp(2rem, 5vw, 5rem);
+
+  border: 2px solid var(--clr-light-grey);
+  border-radius: 5px;
+  max-width: 100%;
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__cap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__headline {
+    border-bottom: 2px solid var(--clr-light-grey);
+  }
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.location {
+  width: 100%;
+  &__camp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: clamp(2rem, 5vw, 5rem);
+
+    border: 2px solid var(--clr-light-grey);
+    border-radius: 5px;
+  }
+
+  &__camp-map-box {
+    background-image: url('../../images/Map-image/Map.png');
+    background-position: top;
+    background-size: cover;
+    height: 30rem;
+    width: 100%;
+  }
+}
+
+.footer-offer {
+  margin-bottom: 4rem;
+  &__logo {
+    height: 2.4rem;
+    width: 100%;
+  }
+}
