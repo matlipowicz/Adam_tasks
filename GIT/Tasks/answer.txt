@@ -1,0 +1,26 @@
+EX.3 
+Zapoznaj się z każdym z nich i odpowiedz na pytanie:
+-	Czym różnię się rebasowanie od mergowania?
+
+* Mergowanie to scalanie gałęzi oraz commitów, czyli historia commitów z innego brancha jest przypisywana do historii tego który sacalamy. Czyli źródłowa historia commitów pozostaje i zostaje połączona
+
+* Rebase (zmiana bazy) dołącza gałąź np. feature do maina tworząc liniową historię zmian co upraszcza przegląd dla innych developerów
+
+Róznice:
+
+Git merge: 
+
+    - prostota i ogólna znajomość w społe
+    - zachowuję całą hostorię w porządku chronologoicznym
+    - utrzymuję kontekst gałęzi
+
+Git rebase:
+
+    - Wyczyszcza pośrednie commity i tworzy jeden commit
+    - więskzy porzadek commitów
+    - Usprawnia potencjalnie złozoną historię commitów
+
+
+-	Kiedy używać git rebase a kiedy git merge?
+
+    Merge przy projektach w większych zespołach a rebase jak pracuję się samemu. To oznacza, ze nie nalezy na publicznych repo uzywać rebase tylko merge nie nadpisując zmian. 
