@@ -628,7 +628,7 @@
 
 //! KLASY
 
-class Miecz {
+class Sword {
   static wykutyPrzez = 'Elfy';
   #name; //pole prywatne
   silaAtaku;
