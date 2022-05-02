@@ -629,7 +629,7 @@
 //! KLASY
 
 class Miecz {
-  static wykutyPrzez = 'Elfs';
+  static wykutyPrzez = 'Elfy';
   #name; //pole prywatne
   silaAtaku;
 
