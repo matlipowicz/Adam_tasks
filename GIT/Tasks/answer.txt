@@ -24,3 +24,39 @@ Git rebase:
 -	Kiedy używać git rebase a kiedy git merge?
 
     Merge przy projektach w większych zespołach a rebase jak pracuję się samemu. To oznacza, ze nie nalezy na publicznych repo uzywać rebase tylko merge nie nadpisując zmian. 
+
+    EX.4
+
+    Czym się różni GIT Flow od GitHub Flow? Na czym polega każde z podejść?
+
+    GIT Flow polega na odpowednim uporządkowaniu branchy np.:
+
+        - main (master)
+        - hotfix
+        - releses
+        - feautres
+        - develop (nieoficjalny master)
+
+    GitHub Flow polega na utworzeniu tylko dwóch rodzaji branchy:
+
+        - main
+        - features
+
+        Główne róznice to jak widać strukturyzacja branchy przez to gitflow jest trudniejszym ale bardziej uniwersalnym sposobem jezeli chcemy pokazac MVP klientowi to korzystamy z brancha development który słuzy jako taki "brat bliźniak maina", który nie jest bezpośrednio końcowym efektem wszyskich branchy. Czyli nie wgrywa się go na serwery
+
+    EX.5
+
+    * Continous Integration: ciągła integracja zmian w kodzie która umozliwia przeciwdziałanie tzw "merge conflict hell". Do tego wykorzystuję się proces automatycznej budowy i testowania aplikacji po zmianach w kodzie. Takie podejście pozwala na uniknięcie probemów z potencjalnymi bugami.
+
+        Narzedzia do tego podejścia:
+
+        SCM (Source Control Management)/ Version Control System czyli najbardziej popularny to :
+
+        ! GitHub czy BitBucket
+
+        * Do budowania i testowania:
+
+        - Jenkins
+        - GitLab CI
+        - TeamCity
+        - Bamboo
