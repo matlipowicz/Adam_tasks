@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi-Dimensional Object To Table</title>
+  </head>
+  <body>
+    <!-- (A) WE WILL GENERATE THE TABLE HERE -->
+    <div id="demoC"></div>
+
+    <script>
+    window.addEventListener("load", () => {
+      // (B) PARSE THE JSON STRING INTO OBJECT FIRST
+      var data = '{"Name":"John Doe","Email":"john@doe.com","Gender":"male","Colors":["red","green","blue"],"Pet":{"Name":"Roger Doe","Species":"Canis lupus familiaris"}}';
+      data = JSON.parse(data);
+      // console.table(data);
+
+      // (C) GENERATE TABLE
+      // (C1) CREATE EMPTY TABLE
+      var table = document.createElement("table"), row, cellA, cellB;
+      document.getElementById("demoC").appendChild(table);
+      for (let key in data) {
+        // (C2) ROWS & CELLS
+        row = table.insertRow();
+        cellA = row.insertCell();
+        cellB = row.insertCell();
+
+        // (C3) KEY & VALUE
+        cellA.innerHTML = key;
+
+        // (C3-1) COLORS FIELD
+        if (key=="Colors") {
+          cellB.innerHTML = data[key].join(", ");
+        }
+
+        // (C3-2) PET FIELD
+        else if (key=="Pet") {
+          cellB.innerHTML = `<div>Name: ${data[key]["Name"]}</div><div>Species: ${data[key]["Species"]}</div>`;
+        }
+
+        // (C3-3) OTHER FIELDS
+        else {
+          cellB.innerHTML = data[key];
+        }
+      }
+    });
+    </script>
+  </body>
+</html>

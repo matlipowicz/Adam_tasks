@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON To HTML Table</title>
+  </head>
+  <body>
+    <!-- (A) WE WILL GENERATE THE TABLE HERE -->
+    <div id="demoB"></div>
+
+    <script>
+    window.addEventListener("load", () => {
+      // (B) PARSE THE JSON STRING INTO OBJECT FIRST
+      var data = '{"Name":"John Doe","Email":"john@doe.com","Gender":"male"}';
+      data = JSON.parse(data);
+      // console.table(data);
+
+      // (C) GENERATE TABLE
+      var table = "<table>";
+      for (let key in data) {
+        table += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
+      }
+      table += "</table>";
+      document.getElementById("demoB").innerHTML = table;
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON To HTML Table</title>
+  </head>
+  <body>
+    <!-- (A) WE WILL GENERATE THE TABLE HERE -->
+    <div id="demoA"></div>
+
+    <script>
+    window.addEventListener("load", () => {
+      // (B) PARSE THE JSON STRING INTO OBJECT FIRST
+      var data = '{"Name":"John Doe","Email":"john@doe.com","Gender":"male"}';
+      data = JSON.parse(data);
+      // console.table(data);
+
+      // (C) GENERATE TABLE
+      // (C1) CREATE EMPTY TABLE
+      var table = document.createElement("table"), row, cellA, cellB;
+      document.getElementById("demoA").appendChild(table);
+      for (let key in data) {
+        // (C2) ROWS & CELLS
+        row = table.insertRow();
+        cellA = row.insertCell();
+        cellB = row.insertCell();
+
+        // (C3) KEY & VALUE
+        cellA.innerHTML = key;
+        cellB.innerHTML = data[key];
+      }
+    });
+    </script>
+  </body>
+</html>

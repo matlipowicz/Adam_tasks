@@ -302,7 +302,7 @@ Następnie stwórz klasę Bank, która będzie zawierała tablicę wielu obiekt�
 
 Podaj przykład praktycznego wykorzystania prototypu w JS.
 
-* Prototyp może byc wykorzystany do łatwego dostępu metod dla innych instancji/klas czy dynamicznie dodawanie pól w klasach. Najprościej w świecie prototype tworzy taki łańcuch metod które stworzyliśmy i po dodaniu do nowej kalsy prototype i wywołaniu metody z innej klasy sprawdza czy taka jest w poprzednich klasach i ją wywołuję. 
+* Prototyp może byc wykorzystany do łatwego dostępu do metod dla innych instancji/klas, czy dynamicznie dodawanie pól w klasach. Najprościej w świecie prototype tworzy taki łańcuch metod które stworzyliśmy i po dodaniu do nowej kalsy prototype i wywołaniu metody z innej klasy sprawdza czy taka jest w poprzednich klasach i ją wywołuję. 
 
 * Przykładowo mamy klase Elf w której jest kilka pól/atrybutów i metod, teraz chcemy stworzyć klasę Dark_elf która odziedziczy w łatwy sposób wszystkie cechy i metody klasy Elf przez wykorzystanie prototype (obiektu każdej funkcji), która też jest obiektem czyli ma swój własny prototype (nazywa się to "prototype chain"). Generalnie Dark_elf ma odziedziczyć metody i pola, a także otrzymać własną funkcję niedostępną dla innych klas.  
 */
@@ -400,6 +400,8 @@ class Car {
 
   drive(distance) {
     this.odometer += distance;
+
+    this.odometer > 0 ? (this.tank -= distance) : alert('Tank is still full');
   }
 }
 
@@ -408,7 +410,7 @@ const bmw = new Car('e92', 24);
 Car.prototype.tank = 0;
 Car.prototype.odometer = 0;
 bmw.fill(60);
-bmw.drive(49);
+bmw.drive(20);
 
 console.log(bmw);
 
