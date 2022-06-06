@@ -255,6 +255,7 @@ Aby spełniał następujące założenia:
 // let promise = getSomething();
 // promise.then(alert);
 
+//! API TASK
 /*
 
 Zapoznaj się z API [https://jsonplaceholder.typicode.com] i pobierz z API [https://jsonplaceholder.typicode.com/users] po załadowaniu strony wszystkich userów, a następnie za pomocą JSa stwórz funkcję, która stworzy komponent (kartę) i wyświetli dane usera w przeglądarce (name, username, email oraz adres miasto, ulica, kod pocztowy w rozwijanym w karcie panelu). Zastosuj operacje na DOM, składnię async, await oraz ostyluj galerię kart userów z wykorzystaniem pomocą SCSSa.
@@ -289,23 +290,23 @@ const userData = getUsers();
 console.log(userData);
 
 const createCard = ({ name, username, email, address }) => {
-  // User name
+  //* User name
   const userName = document.createElement('p');
   userName.innerText = `${name} ${username}`;
   const userEmail = document.createElement('p');
   userEmail.innerText = `${email}`;
 
-  // User address
+  //* User address
   let city = `<p>${address.city}</p>`;
   let street = `<p>${address.street}</p>`;
   let zipcode = `<p>${address.zipcode}</p>`;
 
-  // User address btn
+  //* User address btn
   const btn = document.createElement('button');
   btn.classList.add('address-btn');
   btn.innerText = 'Unroll address';
 
-  // User card
+  //* User card
   const userAddress = document.createElement('div');
   userAddress.classList.add('user-data-address');
   userAddress.innerHTML = `City: ${city} Street: ${street} Zipcode: ${zipcode}`;
@@ -316,23 +317,13 @@ const createCard = ({ name, username, email, address }) => {
   card.appendChild(btn);
   card.appendChild(userAddress);
 
-  // Unrolling address //? Jak to zrobic żeby się chowało i pojawiało
-  // const clickBtn = document.querySelector('.address-btn');
-  // const unrollBtn = document.querySelector('.user-data-address');
+  function hideDiv() {
+    return userAddress.classList.toggle('unroll');
+  }
 
-  // function hideDiv() {
-  //   return unrollBtn.classList.toggle('unroll');
-  // }
-
-  // clickBtn.addEventListener('click', hideDiv());
+  btn.addEventListener('click', hideDiv);
   return card;
 };
-
-// const createBtn = () => {
-//   const userAddressBtn = document.createElement('button');
-//   userAddressBtn.classList.add('address-btn');
-//   userAddressBtn.innerText('Unroll address');
-// };
 
 getUsers().then(data => {
   const card = document.querySelector('#card');
