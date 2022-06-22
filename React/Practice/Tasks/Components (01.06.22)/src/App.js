@@ -1,9 +1,10 @@
 // import Second from "./components/Second/Second";
 // import First from "./components/First/First";
 // import Fruit from "./components/Button/Button";
-import CardBuilder from "./components/Card/Card";
-import "./App.css";
+// import CardBuilder from "./components/Card/Card";
+// import "./App.css";
 // import Menu from "./components/Menu/Menu";
+import Footer from "./components/Footer/Footer";
 
 // function App() {
 //     return (
@@ -19,11 +20,11 @@ import "./App.css";
 // ? Jak przesłać zdjęcie przez props
 // ? Czy to co "skleiłem ma sens?"
 // ? Jak otrzymać dane z drugiego obiektu, map?
-function Apps() {
-    return <CardBuilder></CardBuilder>;
-}
+// function Apps() {
+//     return <CardBuilder></CardBuilder>;
+// }
 
-export default Apps;
+// export default Apps;
 //! Ex.4
 
 // function Nav() {
@@ -31,3 +32,8 @@ export default Apps;
 // }
 // export default Nav;
 //! Ex.5
+
+function Foot() {
+    return <Footer></Footer>;
+}
+export default Foot;

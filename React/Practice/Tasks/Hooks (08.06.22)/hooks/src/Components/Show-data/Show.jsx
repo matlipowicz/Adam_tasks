@@ -30,14 +30,14 @@ const initialData = {
 
 //! Przy obiektach jako initial value w stanie trzeba rozbijać dla zmiany właściwości
 function Show() {
-    const { isLoggedIn, setIsLoggedIn } = useUserContext();
+    // const { isLoggedIn, setIsLoggedIn } = useUserContext();
 
     const [state, setState] = useState(initialData);
 
-    useEffect(() => {
-        setIsLoggedIn(true);
-    }, []);
-    console.log("logged IN", isLoggedIn);
+    // useEffect(() => {
+    //     setIsLoggedIn(true);
+    // }, []);
+    // console.log("logged IN", isLoggedIn);
 
     const handleSexChange = () => {
         setState((prev) => ({
